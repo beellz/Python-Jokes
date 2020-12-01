@@ -1,5 +1,6 @@
 from urllib import request 
 import json
+import pyttsx3
 
 
 URL = "https://official-joke-api.appspot.com/random_ten"
@@ -29,5 +30,14 @@ print(f" got {len(jokes)} jokes")
 
 for joke in jokes:
     print(joke)
+    pyttsx3.speak("setup")
+    pyttsx3.speak(joke.setup)
+    pyttsx3.speak("the punchline")
+    pyttsx3.speak(joke.punchline)
+
 
 # print(r.read())
+# pyttsx3.speak("setup")
+# pyttsx3.speak(joke.setup)
+# pyttsx3.speak("the punchline")
+# pyttsx3.speak(joke.punchline)
